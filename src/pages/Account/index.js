@@ -1,12 +1,13 @@
-import { Outlet, NavLink, useParams, useSearchParams } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
+// import { useParams, useSearchParams } from "react-router-dom";
 
 function Account() {
-  const params = useParams();
-  const [queryParams] = useSearchParams();
+  // const params = useParams();
+  // const [queryParams] = useSearchParams();
 
-  console.log(params);
-  console.log(queryParams);
-  console.log(queryParams.get("age"));
+  // console.log(params);
+  // console.log(queryParams);
+  // console.log(queryParams.get("age"));
 
   return (
     <>
