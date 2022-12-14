@@ -12,6 +12,13 @@ function Header() {
 
       <div className="d-flex ml-4">
         <Link
+          to="/mystery"
+          className="btn btn--outlined btn--light ml-3 ml-lg-4"
+        >
+          <i className="fa-solid fa-question"></i>
+          <span className="ml-2 d-none d-sm-inline">Mystery</span>
+        </Link>
+        <Link
           to="/account"
           className="btn btn--outlined btn--light ml-3 ml-lg-4"
         >
