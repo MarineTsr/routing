@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,20 +11,20 @@ function Header() {
       </Link>
 
       <div className="d-flex ml-4">
-        <Link
+        <NavLink
           to="/mystery"
           className="btn btn--outlined btn--light ml-3 ml-lg-4"
         >
           <i className="fa-solid fa-question"></i>
           <span className="ml-2 d-none d-sm-inline">Mystery</span>
-        </Link>
-        <Link
-          to="/account"
+        </NavLink>
+        <NavLink
+          to="/account/123?age=30"
           className="btn btn--outlined btn--light ml-3 ml-lg-4"
         >
           <i className="fa-solid fa-user"></i>
           <span className="ml-2 d-none d-sm-inline">Account</span>
-        </Link>
+        </NavLink>
       </div>
     </header>
   );
