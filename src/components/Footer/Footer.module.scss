@@ -6,8 +6,8 @@
 
 .footerMain {
 	padding: $footer-py $footer-py;
-	background-color: fn.getColor($theme-colorscheme, secondary, main);
-	color: fn.getColor($theme-colorscheme, secondary, text);
+	background-color: fn.getColor($theme-colorscheme, dark, main);
+	color: fn.getColor($theme-colorscheme, dark, text);
 
 	&__copyright {
 		font-size: $font-size-xs;
