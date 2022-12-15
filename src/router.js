@@ -5,6 +5,7 @@ import Account from "./pages/Account";
 import AccountSummary from "./pages/Account/components/AccountSummary";
 import AccountInfos from "./pages/Account/components/AccountInfos";
 import Error from "./pages/Error";
+import Alert from "./components/Alert";
 import { homepageLoader } from "./loaders/homepageLoader";
 
 export const router = createBrowserRouter([
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         loader: homepageLoader,
+        errorElement: <Alert />,
         element: <Home />,
       },
       {
