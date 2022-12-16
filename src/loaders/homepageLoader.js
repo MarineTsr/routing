@@ -1,14 +1,10 @@
-export async function homepageLoader() {
-  const response = await fetch("https://restapi.fr/api/CookChef");
-  if (response.ok) {
-    const data = await response.json();
-    // Emulate latency to test loading UI
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 3000);
-    });
-  } else {
-    throw new Error("Can't fetch fetch datas.");
-  }
+import { getRecipes } from "./../apis/recipes";
+
+export async function homepageLoader({ params, request }) {
+  console.log("Params : ", params);
+  console.log("Request : ", request);
+
+  const recipes = await getRecipes();
+
+  return recipes;
 }

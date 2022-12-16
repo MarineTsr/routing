@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useLoaderData } from "react-router-dom";
 // import { useParams, useSearchParams } from "react-router-dom";
 
 function Account() {
@@ -9,10 +9,15 @@ function Account() {
   // console.log(queryParams);
   // console.log(queryParams.get("age"));
 
+  const user = useLoaderData();
+
   return (
     <>
       <div className="d-flex mb-5 pb-5">
         <NavLink end to="" className="btn btn--outlined btn--dark mx-2">
+          Authentification
+        </NavLink>
+        <NavLink to="summary" className="btn btn--outlined btn--dark mx-2">
           Summary
         </NavLink>
         <NavLink to="infos" className="btn btn--outlined btn--dark mx-2">
@@ -22,7 +27,7 @@ function Account() {
 
       <h2 className="text-center mb-5 pb-3">Account</h2>
 
-      <Outlet />
+      <Outlet context={user} />
     </>
   );
 }

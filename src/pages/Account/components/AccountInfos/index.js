@@ -197,7 +197,7 @@ function AccountInfos() {
       <div className="d-flex justify-content-center my-5">
         <NavLink
           preventScrollReset
-          to=".."
+          to="/account/:id/summary"
           className="btn btn--outlined btn--dark"
         >
           Go to summary
