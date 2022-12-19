@@ -9,6 +9,7 @@ import Error from "./pages/Error";
 import Alert from "./components/Alert";
 import { accountLoader } from "./loaders/accountLoader";
 import { homepageLoader } from "./loaders/homepageLoader";
+import { authAction } from "./actions/authAction";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/auth",
+        action: authAction,
         element: <Auth />,
       },
       {

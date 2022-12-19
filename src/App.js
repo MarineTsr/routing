@@ -7,16 +7,16 @@ import {
   ScrollRestoration,
 } from "react-router-dom";
 import Footer from "components/Footer";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function App() {
-  const location = useLocation();
+  // const location = useLocation();
   const navigation = useNavigation();
 
-  useEffect(() => {
-    console.log("Location : ", location);
-    console.log("Navigation : ", navigation);
-  }, [location, navigation]);
+  // useEffect(() => {
+  //   console.log("Location : ", location);
+  //   console.log("Navigation : ", navigation);
+  // }, [location, navigation]);
 
   return (
     <div className="d-flex flex-column flex-fill vh-100">
