@@ -19,7 +19,7 @@ function Header() {
           <span className="ml-2 d-none d-sm-inline">Mystery</span>
         </NavLink>
         <NavLink
-          to="/account/123?age=30"
+          to="/account"
           className="btn btn--outlined btn--light ml-3 ml-lg-4"
         >
           <i className="fa-solid fa-user"></i>

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function AccountInfos() {
+function AccountInfos() {  
   return (
     <>
       <h3 className="text-center mb-5 pb-3">Account Infos</h3>
@@ -197,7 +197,7 @@ function AccountInfos() {
       <div className="d-flex justify-content-center my-5">
         <NavLink
           preventScrollReset
-          to="/account/:id/summary"
+          to="/account"
           className="btn btn--outlined btn--dark"
         >
           Go to summary

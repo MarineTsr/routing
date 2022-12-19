@@ -4,7 +4,7 @@ function AccountSummary() {
   const navigate = useNavigate();
 
   const navigateToInfos = () => {
-    navigate("/account/:id/infos", { preventScrollReset: true });
+    navigate("/account/infos", { preventScrollReset: true });
   };
 
   return (

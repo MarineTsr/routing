@@ -1,20 +1,28 @@
 import { useState } from "react";
 
-function AccountAuth() {
+function Auth() {
   const [login, setLogin] = useState();
   const [pwd, setPwd] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setLogin(event.target.querySelector("#login").value);
-    setPwd(event.target.querySelector("#pwd").value);
+    const currentLogin = event.target.querySelector("#login").value;
+    const currentPwd = event.target.querySelector("#pwd").value;
+
+    if (currentLogin) {
+      setLogin(currentLogin);
+    }
+
+    if (currentPwd) {
+      setPwd(currentPwd);
+    }
 
     console.log(login, pwd);
   };
 
   return (
     <>
-      <h3 className="text-center mb-5 pb-3">Account Authentification</h3>
+      <h2 className="text-center mb-5 pb-3">Authentification</h2>
       <form className="row justify-content-center" onSubmit={handleSubmit}>
         <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
           <div className="form-group">
@@ -40,4 +48,4 @@ function AccountAuth() {
   );
 }
 
-export default AccountAuth;
+export default Auth;

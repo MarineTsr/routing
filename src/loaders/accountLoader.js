@@ -1,5 +1,12 @@
-export async function accountLoader({ params, request }) {
-  const isAuth = false;
+import { getUser } from "../apis/auth";
+import { redirect } from "react-router-dom";
 
-  return isAuth;
+export async function accountLoader({ params, request }) {
+  const user = await getUser();
+
+  if (user) {
+    return user;
+  } else {
+    return redirect('/auth');
+  }
 }

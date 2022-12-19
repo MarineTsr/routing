@@ -9,15 +9,12 @@ function Account() {
   // console.log(queryParams);
   // console.log(queryParams.get("age"));
 
-  const user = useLoaderData();
+  const { user } = useLoaderData();
 
   return (
     <>
       <div className="d-flex mb-5 pb-5">
         <NavLink end to="" className="btn btn--outlined btn--dark mx-2">
-          Authentification
-        </NavLink>
-        <NavLink to="summary" className="btn btn--outlined btn--dark mx-2">
           Summary
         </NavLink>
         <NavLink to="infos" className="btn btn--outlined btn--dark mx-2">
