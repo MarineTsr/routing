@@ -6,5 +6,5 @@ export async function getUser() {
     },
   };
 
-  return false;
+  return data;
 }

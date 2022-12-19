@@ -1,13 +1,10 @@
+import { Suspense } from "react";
+import { Outlet, useNavigation, ScrollRestoration } from "react-router-dom";
 import Header from "components/Header";
 import Loader from "components/Layout/Loader";
-import {
-  Outlet,
-  useLocation,
-  useNavigation,
-  ScrollRestoration,
-} from "react-router-dom";
 import Footer from "components/Footer";
 // import { useEffect } from "react";
+// import {useLocation} from "react-router-dom"
 
 function App() {
   // const location = useLocation();
@@ -23,7 +20,13 @@ function App() {
       <Header />
       <main className="main-content flex-fill">
         <div className="container">
-          {navigation.state === "loading" ? <Loader /> : <Outlet />}
+          {navigation.state === "loading" ? (
+            <Loader />
+          ) : (
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
+          )}
         </div>
       </main>
 

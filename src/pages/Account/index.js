@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { Outlet, NavLink, useLoaderData } from "react-router-dom";
 // import { useParams, useSearchParams } from "react-router-dom";
+import Loader from './../../components/Layout/Loader';
 
 function Account() {
   // const params = useParams();
@@ -24,7 +26,9 @@ function Account() {
 
       <h2 className="text-center mb-5 pb-3">Account</h2>
 
-      <Outlet context={user} />
+      <Suspense fallback={<Loader />}>
+        <Outlet context={user} />
+      </Suspense>
     </>
   );
 }
